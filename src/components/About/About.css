@@ -1,0 +1,21 @@
+#about {
+    background-color: #e4b6dc0c;
+    padding: 60px 20px;
+    text-align: center;
+    align-items: center;
+    padding:150px;
+}
+
+#about h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #0d0c0c;
+    text-align: center;
+}
+
+#about p {
+    font-size: 1.1rem;
+    color: #0c0c0c;
+    max-width: 600px;
+    margin: 0 auto;
+}
