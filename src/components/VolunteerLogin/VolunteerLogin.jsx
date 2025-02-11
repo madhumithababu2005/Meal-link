@@ -1,37 +1,36 @@
-import { useState } from "react";
+import "./VolunteerLogin.css";
 
 const VolunteerLogin = () => {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-
-    const handleLogin = async (e) => {
-        e.preventDefault();
-        const response = await fetch("http://localhost:5000/login", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ email, password, role: "volunteer" }),
-        });
-
-        const data = await response.json();
-        if (response.ok) {
-            alert("Login Successful");
-            localStorage.setItem("token", data.token);
-        } else {
-            alert(data.error);
-        }
-    };
-
     return (
-        <div className="login-container">
-            <h2>Volunteer Login</h2>
-            <form onSubmit={handleLogin}>
-                <input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} required />
-                <input type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} required />
-                <button type="submit">Login</button>
-            </form>
+        <div className="volunteer-container">
+            <h2>Volunteer Opportunities</h2>
+            <div className="cards-container">
+                <div className="card">
+                    <img src="https://media.istockphoto.com/id/1372628045/photo/waitress-handling-a-food-order-to-a-delivery-person-at-a-dark-kitchen.jpg?s=612x612&w=0&k=20&c=CuR2jrliMy6X2Y55cDZVITtwvQSlnF1haKXis6o-onI=" alt="Food Pickup" />
+                    <h3>Food Pickup</h3>
+                    <p>Help collect surplus food from restaurants and stores.</p>
+                </div>
+                <div className="card">
+                    <img src="https://media.istockphoto.com/id/1220577245/photo/hand-to-hand-of-delivery-food-service-sending-delicious-from-restaurant-to-customer-without.jpg?s=612x612&w=0&k=20&c=hi2V5NofkylK9IfkQe7jIc5rUAcPlmKqjr_DmbCeqDo=" alt="Food Delivery" />
+                    <h3>Food Delivery</h3>
+                    <p>Deliver food to shelters and food banks in need.</p>
+                </div>
+                <div className="card">
+                    <img src="https://media.istockphoto.com/id/857146092/photo/sea-of-hands.jpg?s=612x612&w=0&k=20&c=mpZdzYstDIE_OGQ9PivyYdtA5Vq8wwbZF_uazfbfuwo=" alt="Community Support" />
+                    <h3>Community Support</h3>
+                    <p>Assist with organizing and distributing food supplies.</p>
+                </div>
+            </div>
+
+            {/* Move Sign In Button below the cards */}
+            <div className="login-container">
+            <button onClick={() => window.open("/volunteer-signin", "_blank")}>
+  Volunteer Sign In
+</button>
+
+            </div>
         </div>
     );
 };
 
 export default VolunteerLogin;
-
