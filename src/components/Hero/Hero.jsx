@@ -1,46 +1,67 @@
-import React from 'react';
-import logo from '../../assets/images/madhu1.jpeg'; 
-import './Hero.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import "./Hero.css";
 
-export default function Hero() {
+const HomePage = () => {
   return (
-    <section id='hero' className="hero-section">
-      <div className="hero-content">
-        <div className="hero-text">
-          <h1>
-            Hi, <br />
-            <span>I'm Madhumitha B</span>
-          </h1>
-          <p>Welcome to my portfolio.</p>
-        </div>
-        <div className="hero-logo">
-          <img src={logo} alt="madhu logo" />
-        </div>
+    <div className="home-container">
+      {/* Navigation Bar */}
+     
+      <section className="hero">
         
-        <div className="social-icons">
-          <a href="https://github.com/madhumithababu2005" target="_blank" rel="noopener noreferrer">
-            <img 
-              src="https://cdn-icons-png.flaticon.com/512/25/25231.png" 
-              alt="GitHub" 
-              className="social-icon" 
-            />
-          </a>
-          <a href="https://linkedin.com/in/your-username" target="_blank" rel="noopener noreferrer">
-            <img 
-              src="https://cdn-icons-png.flaticon.com/512/61/61109.png" 
-              alt="LinkedIn" 
-              className="social-icon" 
-            />
-          </a>
-          <a href="https://www.instagram.com/__madhu__.07/" target="_blank" rel="noopener noreferrer">
-            <img 
-              src="https://cdn-icons-png.flaticon.com/512/174/174855.png" 
-              alt="Instagram" 
-              className="social-icon" 
-            />
-          </a>
+        <h1>Welcome to MealLink</h1>
+        <p>Reducing food waste and feeding the hungry by connecting donors and volunteers.</p>
+        <div className="hero-buttons">
+          <Link to="/donor-register" className="btn primary">Donate Food</Link>
+          <Link to="/volunteer-register" className="btn secondary">Join as a Volunteer</Link>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* About Section */}
+      <section className="about">
+        <h2>What is MealLink?</h2>
+        <p>
+          MealLink is a platform that helps restaurants, stores, and events donate surplus food to food banks and shelters.
+          Our mission is to ensure that good food doesn't go to waste but instead reaches people who need it.
+        </p>
+      </section>
+
+      {/* How It Works */}
+      <section className="how-it-works">
+        <h2>How It Works</h2>
+        <div className="steps">
+          <div className="step">
+            <span>📦</span>
+            <h3>List Surplus Food</h3>
+            <p>Restaurants & stores upload food details on MealLink.</p>
+          </div>
+          <div className="step">
+            <span>🚗</span>
+            <h3>Volunteers Pick Up</h3>
+            <p>Our volunteers collect & deliver food to nearby shelters.</p>
+          </div>
+          <div className="step">
+            <span>🍽</span>
+            <h3>People Get Food</h3>
+            <p>Food banks & shelters distribute meals to those in need.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="cta">
+        <h2>Join Us in Making a Difference</h2>
+        <p>Be a part of the change. Register as a donor or volunteer today!</p>
+        <div className="cta-buttons">
+          <Link to="/donor-register" className="btn primary">Become a Donor</Link>
+          <Link to="/volunteer-register" className="btn secondary">Join as a Volunteer</Link>
+        </div>
+      </section>
+
+      {/* Footer */}
+      
+    </div>
   );
-}
+};
+
+export default HomePage;

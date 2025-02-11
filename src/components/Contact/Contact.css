@@ -1,93 +1,40 @@
-#contact {
-    background-color: #e4b6dc0c;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-#contact h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #070707;
-}
-
-.contact-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    max-width: 800px;
+.contact {
+    padding: 50px;
+    background-color: #f7f7f7;
+  }
+  
+  .contact-content {
+    max-width: 600px;
     margin: 0 auto;
-    gap: 20px;
-}
-
-.contact-details {
-    flex: 1;
-    min-width: 200px;
-    text-align: left;
-    padding: -20px;
-    margin-top:68px;
-    margin-left:-30px;
-}
-
-.contact-item {
+    text-align: center;
+  }
+  
+  .contact h2 {
+    font-size: 2.5rem;
+    color: #333;
+  }
+  
+  .contact form {
     display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-    font-size: 1rem;
-    color: #070707;
-}
-
-.contact-icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
-}
-
-.contact-form {
-    flex: 2;
-    min-width: 300px;
-    margin-top:10px;
-    margin-right:-100px;
-    margin-left: 100px;
-}
-
-.contact-form form {
-    max-width: 100%;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .contact input,
+  .contact textarea {
     padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #4d0606;
-    border-radius: 5px;
     font-size: 1rem;
-}
-
-.contact-form button {
-    background-color: rgba(47, 3, 60, 0.712);
-    color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .contact button {
+    padding: 12px;
+    background-color: #f7b731;
     border: none;
-    padding: 10px 20px;
     border-radius: 5px;
-    font-size: 1rem;
+    color: white;
+    font-size: 1.2rem;
     cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.contact-form button:hover {
-    background-color: #5ea507;
-}
-
-
-@media (max-width: 768px) {
-    .contact-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .contact-details {
-        text-align: center;
-    }
-}
+  }
+  

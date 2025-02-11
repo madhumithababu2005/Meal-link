@@ -1,104 +1,129 @@
-.hero-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 4rem 2rem;
-    background: linear-gradient(to right, #a7d9c3, #dfb5d8);
-    color: #fff;
-    height: 100vh; 
-    text-align: center;
-  }
-  
-  .hero-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px;
-  }
-  
-  .hero-text {
-    flex: 1;
-    font-size: 4rem;
-  }
-  
-  .hero-text h1 {
-    margin: 0;
-    line-height: 1.5;
-    font-size:2.8rem;
-   color:rgba(52, 8, 66, 0.68);
-  }
-  
-  .hero-text span {
-    font-size: 3.0rem;
-    display: block;
-  }
-  
-  .hero-text p {
-    font-size: 2.2rem;
-    margin-top: 1rem;
-    font-weight: 300;
-    color:rgb(6, 48, 19);
-  }
-  
-  
-  
-  
-  
-  .hero-logo img {
-    width: 330px; 
-    height: 330px; 
-    border-radius: 50%; 
-    transition: transform 0.3s ease;
-    object-fit: cover; 
-    margin-left: 180px;
-    margin-right: 100px;
-    border: 5px solid #9a6db5; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #f7f7f7;
 }
 
+/* Navigation Bar */
+
+
+/* Hero Section */
+.hero {
+  margin-top:0.8px;
+  text-align: center;
+  padding: 100px 20px;
+  background: url("https://storage.googleapis.com/wp-static/wp-charitymeals/2023/12/3ba9b07f-impact_of_school_meals.jpg") no-repeat center;
+  background-size: cover;
+  color: rgb(15, 14, 14);
   
-  
-  .hero-logo img:hover {
-    transform: scale(1.1); 
-  }
-  .social-icons {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    gap: 55px;
-    flex-direction:column;
-  }
-  
-  .social-icon {
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-  }
-  
-  .social-icon:hover {
-    transform: scale(1.2);
-  }
-  
-  @media (max-width: 768px) {
-    .hero-section {
-      flex-direction: column;
-      height: auto;
-    }
-  
-    .hero-content {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-  
-    .hero-logo img {
-      width: 300px;
-    }
-  
-    .hero-text {
-      font-size: 1.5rem;
-    }
-  }
-  
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.6);
+  display: inline-block; /* Ensures the background wraps around the text */
+  padding: 10px 20px; /* Adjust padding to fit content */
+  border-radius: 8px; /* Optional: Adds smooth rounded corners */
+  color:white;
+}
+
+.hero p {
+  font-size: 20px;
+  color:white;
+  margin: 15px 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: inline-block; /* Ensures background fits text */
+  padding: 4px 10px; /* Adjust padding */
+  border-radius: 4px; /* Optional: Adds smooth rounded corners */
+}
+
+
+.hero-buttons {
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 12px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 18px;
+  display: inline-block;
+  margin: 10px;
+}
+
+.btn.primary {
+  background: #ff7043;
+  color: white;
+}
+
+.btn.secondary {
+  background: white;
+  color: #ff7043;
+  border: 2px solid #ff7043;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+/* About Section */
+.about {
+  text-align: center;
+  padding: 60px 20px;
+  background: #ffffff;
+}
+
+.about h2 {
+  color: #ff7043;
+}
+
+/* How It Works */
+.how-it-works {
+  padding: 60px 20px;
+  text-align: center;
+  background: #f8f8f8;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.step {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.step span {
+  font-size: 40px;
+}
+
+.step h3 {
+  margin: 10px 0;
+}
+
+/* Call to Action */
+.cta {
+  text-align: center;
+  padding: 50px 20px;
+  background: #ff7043;
+  color: white;
+}
+
+.cta-buttons {
+  margin-top: 20px;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #333;
+  color: white;
+}

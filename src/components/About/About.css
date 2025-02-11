@@ -1,21 +1,118 @@
-#about {
-    background-color: #e4b6dc0c;
+.about-container {
+    font-family: "Arial", sans-serif;
+margin-top:10px;
+  }
+  
+  /* Hero Section */
+  .about-hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: url("") no-repeat center;
+    background-size: cover;
+    color: rgb(84, 8, 8);
+    
+    
+  }
+  
+  .about-hero h1 {
+    font-size: 36px;
+    
+  }
+  
+  .about-hero p {
+    font-size: 18px;
+  }
+  
+  /* Mission Section */
+  .mission {
+    text-align: center;
+    padding: 60px 20px;
+    background: #f8f8f8;
+  }
+  
+  .mission h2 {
+    color: #ff7043;
+  }
+  
+  /* How It Works */
+  .how-it-works {
     padding: 60px 20px;
     text-align: center;
-    align-items: center;
-    padding:150px;
-}
-
-#about h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #0d0c0c;
+  }
+  
+  .steps {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .step {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .step span {
+    font-size: 40px;
+  }
+  
+  .step h3 {
+    margin: 10px 0;
+  }
+  
+  /* Impact Section */
+  .impact {
+    background: #ff7043;
+    color: white;
+    padding: 60px 20px;
     text-align: center;
-}
-
-#about p {
-    font-size: 1.1rem;
-    color: #0c0c0c;
-    max-width: 600px;
-    margin: 0 auto;
-}
+  }
+  
+  .impact-stats {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+  }
+  
+  .stat {
+    font-size: 18px;
+  }
+  
+  /* Call to Action */
+  .cta {
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .cta-buttons {
+    margin-top: 20px;
+  }
+  
+  .btn {
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    display: inline-block;
+    margin: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  .btn.primary {
+    background: #ff7043;
+    color: white;
+  }
+  
+  .btn.secondary {
+    background: white;
+    color: #ff7043;
+    border: 2px solid #ff7043;
+  }
+  
+  .btn:hover {
+    opacity: 0.8;
+  }

@@ -1,37 +1,77 @@
-
-nav {
-    background-color: rgba(33, 2, 57, 0.598);
-    padding: 1rem;
-    position: fixed;
-    width: 50%; 
-    top: 30px;
-    left: 0;
-    right: 0;
-    margin:0 auto; 
-    z-index: 10;
-    box-shadow: 0px 4px 6px rgba(47, 3, 60, 0.1);
-    border-radius: 20px; 
-}
-
-nav ul {
+/* Navbar container */
+.navbar {
     display: flex;
-    justify-content: center;
+    justify-content: space-between; /* Space between logo and links */
+    align-items: center; /* Vertically centers the content */
+    padding: 20px;
+    background-color: #333;
+    color: white;
+  }
+  /* Style the navbar */
+nav {
+    background-color: #333;
+    padding: 10px 20px;
+  }
+  
+  /* Make the navbar links display in a row */
+  nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
-}
-
-nav li {
-    margin: 0 1.5rem;
-}
-
-nav a {
-    color: white;
+    display: flex; /* This aligns items horizontally */
+    justify-content: space-between; /* Adjust spacing between the links */
+  }
+  
+  /* Style each link */
+  nav li {
+    margin-right: 20px;
+  }
+  
+  /* Style the links */
+  nav a {
     text-decoration: none;
+    color: white;
     font-size: 1.1rem;
-    transition: color 0.3s ease-in-out;
-}
-
-nav a:hover {
-    color: #00b894;
-}
+    transition: color 0.3s ease;
+  }
+  
+  /* Hover effect for links */
+  nav a:hover {
+    color: #f7b731; /* Change color on hover */
+  }
+  
+  /* Navbar logo */
+  .navbar-logo a {
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #f7b731;
+  }
+  
+  /* Navbar links container */
+  .navbar-links {
+    list-style: none;
+    display: flex; /* Align items horizontally */
+    gap: 20px; /* Spacing between list items */
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Individual list item */
+  .navbar-links li {
+    margin: 0;
+  }
+  
+  /* Navbar link styles */
+  .navbar-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+  }
+  
+  /* Hover effect for links */
+  .navbar-links a:hover {
+    color: #f7b731;
+  }
+  

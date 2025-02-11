@@ -1,42 +1,59 @@
-import React from 'react';
-import './Contact.css';
+import React, { useState } from "react";
+import "./Contact.css";
 
-function Contact() {
-    return (
-        <section id="contact" className="section">
-            <h2>Contact Me</h2>
-            <div className="contact-container">
-               
-                <div className="contact-details">
-                    <div className="contact-item">
-                        <img 
-                            src="https://cdn-icons-png.flaticon.com/512/732/732200.png" 
-                            alt="Email Icon" 
-                            className="contact-icon" 
-                        />
-                        <span>madhumithababu2005@gmail.com</span>
-                    </div>
-                    <div className="contact-item">
-                        <img 
-                            src="https://cdn-icons-png.flaticon.com/512/724/724664.png" 
-                            alt="Phone Icon" 
-                            className="contact-icon" 
-                        />
-                        <span>+91 90032 95185</span>
-                    </div>
-                </div>
-               
-                <div className="contact-form">
-                    <form>
-                        <input type="text" placeholder="Enter your Name" required />
-                        <input type="email" placeholder="Enter your Email" required />
-                        <textarea placeholder="Your Message" required></textarea>
-                        <button type="submit">Send</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-    );
-}
+const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: ""
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert("Message sent successfully!");
+  };
+
+  return (
+    <section className="contact">
+      <div className="contact-content">
+        <h2>Contact Us</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            placeholder="Your Name"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            placeholder="Your Email"
+            required
+          />
+          <textarea
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            placeholder="Your Message"
+            required
+          />
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+  );
+};
 
 export default Contact;
